@@ -1,4 +1,4 @@
-import { useState } from "react"; 
+import { useState, useEffect } from "react"; 
 
 import Image from "next/image";
 import Link from "next/link";
@@ -8,43 +8,56 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 const Navbar = () => {
     const [navState , setNavState] = useState(false);
+    const [shadow, setShadow] = useState(false);
 
     const handleNav = () => {
-        setNavState(!navState) 
+        setNavState(!navState)
+        return; 
     }
 
+    useEffect(() => {
+        const handleShadow = () => {
+            if (window.scrollY >= 150){
+                setShadow(true);
+            } else {
+                setShadow(false);
+            }
+        }
+        window.addEventListener('scroll', handleShadow);
+    })
+
     return ( 
-        <div className="fixed w-full h-20 shadow-xl z-[100]">
+        <div className={shadow ? "fixed w-full h-20 shadow-xl z-[100] bg-white" : "fixed w-full h-20 z-[100]"}>
             <div className="flex justify-between items-center w-full h-full px-10 2xl:px-16">
-            <Image 
-            src="/../public/assets/logowebsite.png" 
-            alt="Website Logo"
-            width="60" 
-            height="60"/>
-            <div>
-                <ul className="hidden md:flex">
-                    <Link href="/">
-                        <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Home</li>
-                    </Link>
-                    <Link href="/">
-                        <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">About</li>
-                    </Link>
-                    <Link href="/">
-                        <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Skills</li>
-                    </Link>
-                    <Link href="/">
-                        <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Projects</li>
-                    </Link>
-                    <Link href="/">
-                        <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Contact</li>
-                    </Link>
-                </ul>
-                <div className="md:hidden cursor-pointer" onClick={handleNav}>
-                    <AiOutlineMenu size={25}/>
+                <Image 
+                src="/../public/assets/logowebsite.png" 
+                alt="Website Logo"
+                width="60" 
+                height="60"/>
+                <div>
+                    <ul className="hidden md:flex">
+                        <Link href="/">
+                            <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Home</li>
+                        </Link>
+                        <Link href="/#about">
+                            <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">About</li>
+                        </Link>
+                        <Link href="/#skills">
+                            <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Skills</li>
+                        </Link>
+                        <Link href="/#projects">
+                            <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Projects</li>
+                        </Link>
+                        <Link href="/#contact">
+                            <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Contact</li>
+                        </Link>
+                    </ul>
+                    <div className="md:hidden cursor-pointer" onClick={handleNav}>
+                        <AiOutlineMenu size={25}/>
+                    </div>
                 </div>
             </div>
-            </div>
-            <div className={navState && "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ease-in duration-300"}>
+            <div className={navState ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ease-in duration-300" : undefined}>
                 <div className={navState ? 
                                 "md:hidden fixed left-0 top-0 w-[75%] sm:w-[45%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-700" : 
                                 "md:hidden fixed left-[-100%] top-0 w-[75%] sm:w-[45%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-700"}>
@@ -56,19 +69,19 @@ const Navbar = () => {
                     </div>
                     <ul className="flex flex-col gap-10">
                         <Link href="/">
-                            <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Home</li>
+                            <li onClick={()=>{setNavState(false)}} className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Home</li>
                         </Link>
-                        <Link href="/">
-                            <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">About</li>
+                        <Link href="/#about">
+                            <li onClick={()=>{setNavState(false)}} className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">About</li>
                         </Link>
-                        <Link href="/">
-                            <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Skills</li>
+                        <Link href="/#skills">
+                            <li onClick={()=>{setNavState(false)}} className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Skills</li>
                         </Link>
-                        <Link href="/">
-                            <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Projects</li>
+                        <Link href="/#projects">
+                            <li onClick={()=>{setNavState(false)}} className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Projects</li>
                         </Link>
-                        <Link href="/">
-                            <li className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Contact</li>
+                        <Link href="/#contact">
+                            <li onClick={()=>{setNavState(false)}} className="ml-10 text-md uppercase hover:text-blue-600 hover:border-b">Contact</li>
                         </Link>
                     </ul>
                     <div className="py-10 ml-10">
