@@ -63,7 +63,7 @@ const Navbar = () => {
                                 "md:hidden fixed left-[-100%] top-0 w-[75%] sm:w-[45%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-700"}>
                     <div className="flex justify-between item-center mb-10">
                     <Image 
-                        src="/../public/assets/logowebsitefix.png" 
+                        src="/logowebsitefix.png" 
                         alt="Website Logo"
                         width="60" 
                         height="60"/>
