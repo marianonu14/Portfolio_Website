@@ -12,7 +12,7 @@ const About = () => {
                 </div>
                 <div className="w-full h-auto flex items-center justify-center md:justify-end mt-10 md:mt-0">
                     <Image 
-                    src="/../public/assets/imgAbout.jpg" 
+                    src="./../public/assets/imgAbout.jpg" 
                     alt="About Me"
                     width={300}
                     height={400}
