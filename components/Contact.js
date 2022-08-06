@@ -13,8 +13,8 @@ const Contact = () => {
                 <form className="flex flex-col gap-5 w-[100%] md:w-[50%] m-auto">
                     <label htmlFor="name">Name</label>
                     <input type="text" id="name" />
-                    <label htmlFor="name">Last Name</label>
-                    <input type="text" id="name" />
+                    <label htmlFor="last_name">Last Name</label>
+                    <input type="text" id="last_name" />
                     <label htmlFor="email">Email</label>
                     <input type="email" id="email" />
                     <label htmlFor="message">Type your message here</label>

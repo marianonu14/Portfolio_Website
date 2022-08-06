@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className={shadow ? "fixed w-full h-20 shadow-xl z-[100] bg-white" : "fixed w-full h-20 z-[100]"}>
             <div className="flex justify-between items-center w-full h-full px-10 2xl:px-16">
                 <Image 
-                src="/../public/assets/logowebsite.png" 
+                src="/../public/assets/logowebsitefix.png" 
                 alt="Website Logo"
                 width="60" 
                 height="60"/>
@@ -62,7 +62,11 @@ const Navbar = () => {
                                 "md:hidden fixed left-0 top-0 w-[75%] sm:w-[45%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-700" : 
                                 "md:hidden fixed left-[-100%] top-0 w-[75%] sm:w-[45%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-700"}>
                     <div className="flex justify-between item-center mb-10">
-                        <Image  src="/../public/assets/logowebsite.png" alt="Website Logo" width="60" height="60"/>
+                    <Image 
+                        src="/../public/assets/logowebsitefix.png" 
+                        alt="Website Logo"
+                        width="60" 
+                        height="60"/>
                         <div className="cursor-pointer" onClick={handleNav}>
                             <AiOutlineClose size={25}/>
                         </div>
