@@ -1,9 +1,11 @@
 import ProjectCard from "./ProjectCard";
 import formula1Img from '../public/formula1_app.png'
+import bloggerImg from '../public/blogger_image.png'
 
 
 const Projects = () => {
-    const infoFormulaOne = 'This web app which provides a historical record of Formula One motor racing data'
+    const infoFormulaOne = 'This web app provides a historical record of Formula One motor racing data'
+    const infoBlogger = 'The Blogger App, allows you publish posts to your blog wherever you are'
 
     return ( 
         <div id="projects" className="relative w-full p-10">
@@ -12,9 +14,7 @@ const Projects = () => {
                 <h2 className="text-blue-600">What I ve Built</h2>
                 <div className="grid xl:grid-cols-2">
                     <ProjectCard title="Formula 1 App" link={'https://formula1-api.vercel.app/'} image={formula1Img} info={infoFormulaOne}/>
-                    <ProjectCard title="Project 2" link={'/'} image={'/Project_1.jpg'}/>
-                    <ProjectCard title="Project 3" link={'/'} image={'/Project_1.jpg'}/>
-                    <ProjectCard title="Project 4" link={'/'} image={'/Project_1.jpg'}/>
+                    <ProjectCard title="Blogger App" link={'https://blogger-app-seven.vercel.app/'} image={bloggerImg} info={infoBlogger}/>
                 </div>
             </div>
         </div>
