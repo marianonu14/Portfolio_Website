@@ -19,6 +19,7 @@ const Projects = () => {
                 <div className="flex flex-wrap justify-evenly gap-10">
                     <ProjectCard 
                     title="Formula 1 App" 
+                    reverse='md:flex-row'
                     link={'https://formula1-api.vercel.app/'}
                      repo={'https://github.com/marianonu14/Formula1-Api'} 
                      image={formula1Img} 
@@ -27,6 +28,7 @@ const Projects = () => {
                      />
                     <ProjectCard 
                     title="Blogger App" 
+                    reverse='md:flex-row-reverse'
                     link={'https://blogger-app-seven.vercel.app/'}  
                     repo={'https://github.com/marianonu14/Blogger-App'} 
                     image={bloggerImg} 
@@ -35,6 +37,7 @@ const Projects = () => {
                     />
                     <ProjectCard 
                     title="E-Guitar" 
+                    reverse='md:flex-row'
                     link={'https://e-guitar.vercel.app/'} 
                     repo={'https://github.com/marianonu14/e-guitar'} 
                     image={eGuitarImg} 
@@ -43,6 +46,7 @@ const Projects = () => {
                     />
                     <ProjectCard 
                     title="Financial-Dashboard" 
+                    reverse='md:flex-row-reverse'
                     link={'https://financial-dashboard-seven.vercel.app/'} 
                     repo={'https://github.com/marianonu14/Financial-Dashboard'} 
                     image={financialDashboardImg} 
