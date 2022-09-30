@@ -20,7 +20,7 @@ const Projects = () => {
                     <ProjectCard 
                     title="Formula 1 App" 
                     link={'https://formula1-api.vercel.app/'}
-                     repo={'https://github.com/marianonu14/Financial-Dashboard'} 
+                     repo={'https://github.com/marianonu14/Formula1-Api'} 
                      image={formula1Img} 
                      info={infoFormulaOne}
                      tech={'ReactJS, TailwindCSS'}
@@ -28,7 +28,7 @@ const Projects = () => {
                     <ProjectCard 
                     title="Blogger App" 
                     link={'https://blogger-app-seven.vercel.app/'}  
-                    repo={'https://github.com/marianonu14/Financial-Dashboard'} 
+                    repo={'https://github.com/marianonu14/Blogger-App'} 
                     image={bloggerImg} 
                     info={infoBlogger}
                     tech={'ReactJS, TailwindCSS, React-Router, NodeJS, MongoDB'}
@@ -36,7 +36,7 @@ const Projects = () => {
                     <ProjectCard 
                     title="E-Guitar" 
                     link={'https://e-guitar.vercel.app/'} 
-                    repo={'https://github.com/marianonu14/Financial-Dashboard'} 
+                    repo={'https://github.com/marianonu14/e-guitar'} 
                     image={eGuitarImg} 
                     info={infoEGuitar}
                     tech={'ReactJS, NextJS, TailwindCSS'}
