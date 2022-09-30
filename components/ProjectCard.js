@@ -28,7 +28,7 @@ const ProjectCard = (props) => {
                         <a target='_blank' rel="noreferrer" className="flex justify-between items-center px-5 lg:w-1/2 text-center text-base sm:text-xl cursor-pointer bg-blue-600 hover:bg-white text-white hover:text-blue-600 duration-700 p-3 rounded-xl"><TbBrowserPlus size={35} />Visit the App</a>
                     </Link>   
                     <Link href={props.repo}>
-                        <a target='_blank' rel="noreferrer" className="flex justify-between items-center px-5 lg:w-1/2 text-center text-base sm:text-xl cursor-pointer bg-gray-600 hover:bg-white text-white hover:text-gray-600 duration-700 p-3 rounded-xl"><BsGithub size={35} />Go to the Repository</a>
+                        <a target='_blank' rel="noreferrer" className="flex justify-between items-center px-5 lg:w-1/2 text-center text-base sm:text-xl cursor-pointer bg-gray-600 hover:bg-white text-white hover:text-gray-600 duration-700 p-3 rounded-xl"><BsGithub size={35} />Go to Repository</a>
                     </Link> 
                 </div>
             </div>
